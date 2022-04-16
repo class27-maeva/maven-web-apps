@@ -96,7 +96,7 @@
 	<distributionManagement>
 	    <repository>
 	      <id>nexus</id>
-	      <name>Landmark Technologies Releases Nexus Repository</name>
+	      <name>Maeva Technologies Releases Nexus Repository</name>
 	      <url>http://34.207.66.192:4000/repository/boa-bts/</url>
 	    </repository>
 	    
