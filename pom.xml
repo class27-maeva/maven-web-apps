@@ -102,7 +102,7 @@
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
-	      <name>Landmark Technologies Snapshot Nexus Repository </name>
+	      <name>Maeva Technologies Snapshot Nexus Repository </name>
 	      <url>http://34.207.66.192:4000/repository/boa-bts-snapshot/</url>
 	    </snapshotRepository>
 	    
