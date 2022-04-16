@@ -97,7 +97,7 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>Landmark Technologies Releases Nexus Repository</name>
-	      <urlhttp://34.207.66.192:4000/repository/boa-bts/</url>
+	      <url>http://34.207.66.192:4000/repository/boa-bts/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
