@@ -96,13 +96,13 @@
 	<distributionManagement>
 	    <repository>
 	      <id>nexus</id>
-	      <name>Maeva Technologies Releases Nexus Repository</name>
+	      <name>MaevaM Technologies Releases Nexus Repository</name>
 	      <url>http://34.207.66.192:4000/repository/boa-bts/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
-	      <name>Maeva Technologies Snapshot Nexus Repository </name>
+	      <name>MaevaM Technologies Snapshot Nexus Repository </name>
 	      <url>http://34.207.66.192:4000/repository/boa-bts-snapshot/</url>
 	    </snapshotRepository>
 	    
