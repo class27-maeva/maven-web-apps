@@ -18,7 +18,7 @@ pipeline {
 		}
 	post {
 	        always {
-	            echo 'Test run completed'
+	            echo 'Build run completed'
 	            emailext body: 'Please review Build status', recipientProviders: ['$DEFAULT_RECIPIENTS'], subject: 'Build Status'
 	                     }
 	        success {
