@@ -1,0 +1,33 @@
+pipeline {
+	agent any
+	stages {
+		stage('PrevVersionUnDeployment'){
+			steps{
+				//pause deployment to confirm that everything is correct from CI to CD
+				sh "sleep 20"
+				sh "echo Undeploying Application"
+				sh "docker rm -f webapp"
+			}
+		}
+		stage('Deployment'){
+			steps{
+				sh "echo Application is now ready for Deployment"
+				sh "docker run --name webapp -d -p 7000:8080 evamaeva/maven-web-app"
+				sh "echo Application Deployed"
+			}
+		}
+	post {
+	        always {
+	            echo 'Test run completed'
+	            emailext body: 'Please review Build status', recipientProviders: ['$DEFAULT_RECIPIENTS'], subject: 'Build Status'
+	                     }
+	        success {
+	            echo 'Build was Successful!'
+	                       }
+	        failure {
+	echo 'Test run completed'
+	            emailext body: 'Build failed. Please review the error', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: 'Build Status: failed'
+	            echo 'Build Failed!'
+	                     }
+	}
+}
